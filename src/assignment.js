@@ -16,11 +16,14 @@ const assignment = {};
  */
 function sumOfNumbersTo(destination) {
     let sum = 0;
+    for(let i = 1; i <= destination; i++){
+        sum += i;
+    }
     return sum
 }
 
 
-// assignment.sumOfNumbersTo = sumOfNumbersTo;
+assignment.sumOfNumbersTo = sumOfNumbersTo;
 
 /**
  * Challenge - 2
@@ -33,11 +36,13 @@ function sumOfNumbersTo(destination) {
  * @returns the object containing count, sum, arrayOfEvenNumbers from 1 to destination
  */
 function countEvenNumbersWithin(destination) {
+
     // Write your code here
     // get the number from 1 to destination
     let sum = 0;
     let count = 0;
     let arrayOfEvenNumbers = [];
+
 
     return {
         // property value shorthand
@@ -69,10 +74,16 @@ function countEvenNumbersWithin(destination) {
 function celsiusToFahrenheit(arrayOfNumbers) {
     let result = [];
 
+    for (let i = 0; i < arrayOfNumbers.length; i++) {
+        const celsius = arrayOfNumbers[i];
+        const fahrenheit = Math.trunc(celsius * 9 / 5 + 32);
+        result.push(fahrenheit);
+    }
+
     return result;
 }
 
-// assignment.celsiusToFahrenheit = celsiusToFahrenheit;
+assignment.celsiusToFahrenheit = celsiusToFahrenheit;
 
 // ========================
 // DO NOT EDIT THIS BLOCK
